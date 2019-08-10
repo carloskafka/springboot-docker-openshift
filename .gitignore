@@ -21,3 +21,19 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/.idea/.name
+/target/dependency/BOOT-INF/classes/application.yml
+/target/classes/application.yml
+/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/target/gs-spring-boot-docker-0.1.0.jar.original
+/target/surefire-reports/hello.HelloWorldConfigurationTests.txt
+/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/target/dependency/META-INF/MANIFEST.MF
+/.idea/misc.xml
+/target/dependency-maven-plugin-markers/org.springframework-gs-spring-boot-docker-jar-0.1.0.marker
+/target/dependency/META-INF/maven/org.springframework/gs-spring-boot-docker/pom.properties
+/target/maven-archiver/pom.properties
+/target/dependency/META-INF/maven/org.springframework/gs-spring-boot-docker/pom.xml
+/target/surefire-reports/TEST-hello.HelloWorldConfigurationTests.xml
