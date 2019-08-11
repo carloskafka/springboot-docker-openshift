@@ -1,10 +1,26 @@
-FROM maven:3.5.2-jdk-8-alpine
-VOLUME /tmp
-RUN mkdir /app
-RUN mkdir /app/lib
-RUN mkdir /app/META-INF
-ARG DEPENDENCY=target/dependency
-COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY ${DEPENDENCY}/META-INF /app/META-INF
-COPY ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","hello.Application"]
+# our base build image
+FROM maven:3.5-jdk-8 as maven
+
+# copy the project files
+COPY ./pom.xml ./pom.xml
+
+# build all dependencies
+RUN mvn dependency:go-offline -B
+
+# copy your other files
+COPY ./src ./src
+
+# build for release
+RUN mvn package
+
+# our final base image
+FROM openjdk:8u171-jre-alpine
+
+# set deployment directory
+WORKDIR /gs-spring-boot-docker
+
+# copy over the built artifact from the maven image
+COPY --from=maven target/gs-spring-boot-docker-*.jar ./
+
+# set the startup command to run your binary
+CMD ["java", "-jar", "./target/gs-spring-boot-docker-0.1.0.jar"]
