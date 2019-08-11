@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {             
             steps {
-                  sh 'mvn install dockerfile:build'
+                  sh 'mvn install'
             }
         }
         stage('Test') {
@@ -22,6 +22,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
+                sh 'docker build . -t carloskafka7/springboot-docker'
+                sh 'docker push carloskafka7/springboot-docker'
                 sh 'chmod 777 ./scripts/deliver.sh'
                 sh './scripts/deliver.sh'             
             }
