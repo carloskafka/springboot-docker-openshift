@@ -5,6 +5,11 @@ pipeline {
         maven 'maven3'
     }
     stages {
+        stage('Initialize'){
+              def dockerHome = tool 'docker'
+              def mavenHome  = tool 'maven3'
+              env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
+        }
         stage('Build') {             
             steps {
                   sh 'mvn install'
