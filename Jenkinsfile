@@ -9,6 +9,7 @@ node {
         def dockerHome = tool 'docker'
         def mavenHome  = tool 'maven3'
         env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
+        sh 'chmod 777 /var/run/docker.sock'
     }
 
     stage('Checkout') {
