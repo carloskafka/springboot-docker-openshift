@@ -1,12 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            def dockerHome = tool 'docker'
-            env.PATH = "${dockerHome}/bin:${env.PATH}"
-            image 'maven:3-alpine' 
-            args '-v /root/.m2:/root/.m2' 
-        }
-    }    
+    agent none 
     stages {
         stage('Build') { 
             steps {
