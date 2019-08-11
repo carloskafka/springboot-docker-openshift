@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Build') {             
             steps {
+                sh 'ifconfig' 
                 withEnv([
                 "DOCKER_TLS_VERIFY=1",
                 "DOCKER_HOST=tcp://172.17.0.2:2375"
