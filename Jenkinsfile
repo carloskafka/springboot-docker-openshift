@@ -3,12 +3,14 @@ pipeline {
     tools {
         jdk 'jdk8'
         maven 'maven3'
-        docker 'docker-latest'
     }
     stages {
         stage('Build') {             
             steps {   
-                  sh 'mvn install dockerfile:build'              
+               def dockerTool = tool name: 'docker-latest', type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
+               withEnv(["DOCKER=${dockerTool}/bin"]) {
+                   sh 'mvn install dockerfile:build'              
+               }   
             }
         }
         stage('Test') {
