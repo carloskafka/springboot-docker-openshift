@@ -37,3 +37,15 @@ hs_err_pid*
 /target/maven-archiver/pom.properties
 /target/dependency/META-INF/maven/org.springframework/gs-spring-boot-docker/pom.xml
 /target/surefire-reports/TEST-hello.HelloWorldConfigurationTests.xml
+/target/docker/image-id
+/target/docker/image-name
+/target/docker/repository
+/target/docker/tag
+/target/surefire-reports/2019-08-10T18-11-19_112-jvmRun1.dump
+/target/surefire-reports/2019-08-10T18-11-19_112-jvmRun1.dumpstream
+/target/surefire-reports/2019-08-10T18-23-07_128-jvmRun1.dump
+/target/surefire-reports/2019-08-10T18-23-07_128-jvmRun1.dumpstream
+/target/test-classes/META-INF/docker/org.springframework/gs-spring-boot-docker/image-id
+/target/test-classes/META-INF/docker/org.springframework/gs-spring-boot-docker/image-name
+/target/test-classes/META-INF/docker/org.springframework/gs-spring-boot-docker/repository
+/target/test-classes/META-INF/docker/org.springframework/gs-spring-boot-docker/tag
