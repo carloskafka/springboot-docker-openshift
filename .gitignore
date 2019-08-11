@@ -49,3 +49,6 @@ hs_err_pid*
 /target/test-classes/META-INF/docker/org.springframework/gs-spring-boot-docker/image-name
 /target/test-classes/META-INF/docker/org.springframework/gs-spring-boot-docker/repository
 /target/test-classes/META-INF/docker/org.springframework/gs-spring-boot-docker/tag
+/target/dependency/application.yml
+/target/surefire-reports/2019-08-11T15-45-27_286-jvmRun1.dump
+/target/surefire-reports/2019-08-11T15-45-27_286-jvmRun1.dumpstream
