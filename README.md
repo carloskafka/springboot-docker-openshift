@@ -6,3 +6,27 @@ As an added bonus, this repo can also be deployed directly as a docker container
 
 
 What, you don't have OpenShift 3 yet? Fix that immediately: www.openshift.org/vm
+
+## Jenkins
+
+## Global Tool Configurations
+
+
+
+1. JDK
+
+Adicionar JDK
+Nome: jdk8
+Marcar checkbox instalar automaticamente
+Versão JDK 8u221
+Marcar checkbox Eu concordo com a licença do Java SE Development Kit
+Clicar em "Conta Oracle"
+
+
+2. Maven
+
+Adicionar Maven
+Nome: maven3
+Marcar checkbox instalar automaticamente
+Instalar a partir do Apache
+Versão 3.6.1
