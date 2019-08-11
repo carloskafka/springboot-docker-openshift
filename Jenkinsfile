@@ -22,8 +22,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                //sh './jenkins/scripts/deliver.sh'
-             sh 'echo FOI'
+                sh './scripts/deliver.sh'             
             }
         }
     }
