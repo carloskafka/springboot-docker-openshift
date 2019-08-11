@@ -9,7 +9,7 @@ node {
         def dockerHome = tool 'docker'
         def mavenHome  = tool 'maven3'
         env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
-        sh 'sudo nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &'
+        sh 'su nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &'
     }
 
     stage('Checkout') {
