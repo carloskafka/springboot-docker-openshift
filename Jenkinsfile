@@ -1,5 +1,5 @@
 pipeline {
- agent any
+     agent { dockerfile true }
     tools {
         jdk 'jdk8'
         maven 'maven3'
@@ -7,15 +7,7 @@ pipeline {
     stages {
         stage('Build') {             
             steps {
-               def dockerTool = tool name: 'docker-latest', type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
-
-                withEnv([
-                "DOCKER_TLS_VERIFY=1",
-                "DOCKER_HOST=tcp://10.0.75.0:2375",
-                 "DOCKER=${dockerTool}/bin"
-                ]) {
                   sh 'mvn install dockerfile:build'
-                }
             }
         }
         stage('Test') {
