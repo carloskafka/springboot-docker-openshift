@@ -13,7 +13,7 @@ What, you don't have OpenShift 3 yet? Fix that immediately: www.openshift.org/vm
 
 
 
-1. JDK
+# 1. JDK
 
 Adicionar JDK
 
@@ -28,7 +28,7 @@ Marcar checkbox Eu concordo com a licença do Java SE Development Kit
 Clicar em "Conta Oracle"
 
 
-2. Maven
+# 2. Maven
 
 Adicionar Maven
 
