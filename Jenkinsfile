@@ -3,11 +3,12 @@ pipeline {
     tools {
         jdk 'jdk8'
         maven 'maven3'
+        docker 'docker-latest'
     }
     stages {
         stage('Build') {             
             steps {   
-                  sh 'mvn install dockerfile:build' 
+                  sh 'mvn install dockerfile:build'              
             }
         }
         stage('Test') {
