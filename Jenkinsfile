@@ -5,13 +5,14 @@ pipeline {
         maven 'maven3'
     }
     stages {
-        stage('Build') { 
-            withEnv([
-             "DOCKER_TLS_VERIFY=1",
-             "DOCKER_HOST=tcp://localhost:2376"
-            ]) 
+        stage('Build') {             
             steps {
-                sh 'mvn install dockerfile:build' 
+                withEnv([
+                "DOCKER_TLS_VERIFY=1",
+                "DOCKER_HOST=tcp://localhost:2376"
+                ]) {
+                  sh 'mvn install dockerfile:build' 
+                }
             }
         }
         stage('Test') {
