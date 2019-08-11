@@ -9,7 +9,7 @@ pipeline {
             steps {
                 withEnv([
                 "DOCKER_TLS_VERIFY=1",
-                "DOCKER_HOST=tcp://localhost:2376"
+                "DOCKER_HOST=tcp://${env.PROD_IP}:2376"
                 ]) {
                   sh 'mvn install dockerfile:build' 
                 }
