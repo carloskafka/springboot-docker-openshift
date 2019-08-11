@@ -6,11 +6,7 @@ pipeline {
     }
     stages {
         stage('Build') {             
-            steps {                
-                withEnv([
-                "DOCKER_TLS_VERIFY=1",
-                "DOCKER_HOST=tcp://10.0.75.0:2375"
-                ]) {
+            steps {   
                   sh 'mvn install dockerfile:build' 
                 }
             }
