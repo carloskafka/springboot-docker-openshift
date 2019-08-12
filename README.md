@@ -11,7 +11,7 @@ What, you don't have OpenShift 3 yet? Fix that immediately: www.openshift.org/vm
 
 ## Execução Jenkins
 
-docker run -u root --name jenkins -p 8080:8080 -p 50000:50000  -v /var/run/docker.sock:/var/run/docker.sock -v /home/jenkins_home:/var/jenkins_home  jenkins/jenkins
+`docker run -u root --name jenkins -p 8080:8080 -p 50000:50000  -v /var/run/docker.sock:/var/run/docker.sock -v /home/jenkins_home:/var/jenkins_home  jenkins/jenkins`
 
 ## Instalação do Docker para poder executar o `mvn install dockerfile:build`
 
