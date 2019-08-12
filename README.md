@@ -13,9 +13,21 @@ What, you don't have OpenShift 3 yet? Fix that immediately: www.openshift.org/vm
 
 docker run -u root --name jenkins -p 8080:8080 -p 50000:50000  -v /var/run/docker.sock:/var/run/docker.sock -v /home/jenkins_home:/var/jenkins_home  jenkins/jenkins
 
+## Instalação do Docker para poder executar o `mvn install dockerfile:build`
+
+## Acesso SSH ao Container Jenkins
+docker exec -it -u root jenkins bash
+
+## Passos para instalar Docker
+
+apt-get update && 
+apt-get -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common && 
+curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey && 
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable" && 
+apt-get update && 
+apt-get -y install docker-ce
+
 ## Global Tool Configurations
-
-
 
 # 1. JDK
 
