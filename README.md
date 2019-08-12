@@ -61,3 +61,11 @@ Marcar checkbox instalar automaticamente
 Instalar a partir do Apache
 
 Versão 3.6.1
+
+# 3. Docker
+
+Name: docker
+
+Download from docker.com
+
+Docker Version: latest
