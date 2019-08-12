@@ -33,6 +33,8 @@ What, you don't have OpenShift 3 yet? Fix that immediately: www.openshift.org/vm
 
 `apt-get -y install docker-ce`
 
+`docker login`
+
 ## Global Tool Configurations
 
 # 1. JDK
