@@ -22,7 +22,6 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                docker.build('carloskafka7')
                 sh 'chmod 777 ./scripts/deliver.sh'
                 sh './scripts/deliver.sh'
             }
